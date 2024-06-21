@@ -1,5 +1,6 @@
 // src/components/Works.js
 import React from 'react';
+import music from '../images/audio.gif'
 
 const Works = () => {
   const works = [
@@ -7,60 +8,51 @@ const Works = () => {
       title: 'TU MERI',
       youtube: 'https://youtu.be/O0eLnJ_-v-s',
       description: 'This song reflects a boy\'s realization that his life has improved and become more vibrant since the girl who caused him pain is no longer a part of it.',
-      albumArt: 'path/to/tu-meri-album-art.jpg' // Add the path to the album art
+      albumArt: 'path/to/tu-meri-album-art.jpg', // Add the path to the album art
+      spotifyEmbed: 'https://open.spotify.com/embed/track/1N4TubxZXkhFTGEICOqAht?utm_source=generator'
     },
     {
       title: 'ABHI NAHI',
       youtube: 'https://youtu.be/qDIvZx6fF5w',
       description: 'This song narrates a boy\'s frustration as he tries to focus on an assassination mission while his girlfriend incessantly discusses her emotional issues, prompting him to repeatedly sing that he doesn\'t want to talk and will address it later.',
-      albumArt: 'path/to/abhi-nahi-album-art.jpg' // Add the path to the album art
-    }
-  ];
-
-  const spotifyLinks = [
-    {
-      title: 'AUDACITY',
-      link: 'https://open.spotify.com/track/1N4TubxZXkhFTGEICOqAht?si=4f46d6aaf29b462b',
-      albumArt: 'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg' // Add the path to the album art
-    },
-    {
-      title: 'SULTRY',
-      link: 'https://open.spotify.com/track/4FW7RGggxRZ0f8nRNzUOLd?si=b180815f4b394f0b',
-      albumArt: 'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg' // Add the path to the album art
+      albumArt: 'path/to/abhi-nahi-album-art.jpg', // Add the path to the album art
+      spotifyEmbed: 'https://open.spotify.com/embed/track/4FW7RGggxRZ0f8nRNzUOLd?utm_source=generator'
     },
     {
       title: 'SLIDE ZARA',
-      link: 'https://open.spotify.com/track/5svinFbE044frhIYJzs2GZ?si=be8e6e4beb354195',
-      albumArt: 'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg' // Add the path to the album art
+      youtube: 'https://youtu.be/link-to-slide-zara',
+      description: 'Description of Slide Zara.',
+      albumArt: 'path/to/slide-zara-album-art.jpg', // Add the path to the album art
+      spotifyEmbed: 'https://open.spotify.com/embed/track/5svinFbE044frhIYJzs2GZ?utm_source=generator'
     },
     {
       title: 'FIROZI FITOOR',
-      link: 'https://open.spotify.com/track/327vFaJvqx2yD9gyUTYB9U?si=59a6f8d6ac454e95',
-      albumArt: 'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg' // Add the path to the album art
+      youtube: 'https://youtu.be/link-to-firozi-fitoor',
+      description: 'Description of Firozi Fitoor.',
+      albumArt: 'path/to/firozi-fitoor-album-art.jpg', // Add the path to the album art
+      spotifyEmbed: 'https://open.spotify.com/embed/track/327vFaJvqx2yD9gyUTYB9U?utm_source=generator'
     }
   ];
 
   return (
     <section className="works">
-      <h2>Works</h2>
-      {works.map((work, index) => (
-        <div key={index} className="work-item">
-          <a href={work.youtube} target="_blank" rel="noopener noreferrer" className="work-title">
-            <img src={work.albumArt} alt={`${work.title} album art`} className="album-art" />
-            {work.title}
-          </a>
-          <p>{work.description}</p>
-        </div>
-      ))}
-      <h2>Discography</h2>
-      <div className="spotify-links">
-        {spotifyLinks.map((spotify, index) => (
-          <a key={index} href={spotify.link} target="_blank" rel="noopener noreferrer" className="spotify-item">
-            <img src={spotify.albumArt} alt={`${spotify.title} album art`} className="large-album-art" />
-            <span>{spotify.title}</span>
-          </a>
-        ))}
-      </div>
+     <h2 style={{ display: 'flex', alignItems: 'center' }}>
+      Works
+      <img src={music} alt="music" style={{ height: '45px', width: '45px', marginLeft: '10px' }} />
+    </h2>
+
+      
+      
+      <iframe 
+      style={{borderRadius:"12px" }}
+      src="https://open.spotify.com/embed/track/1N4TubxZXkhFTGEICOqAht" 
+      width="100%" height="152" 
+      frameBorder="0" 
+      allowfullscreen="1" 
+      //allow="autoplay; clipboard-write; encrypted-media;" 
+      loading="lazy"></iframe>
+        
+      
     </section>
   );
 };
