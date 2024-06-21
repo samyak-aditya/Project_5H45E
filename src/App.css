@@ -1,6 +1,7 @@
-/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Asap", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f2f5;
@@ -56,22 +57,40 @@ header .icons > * {
 }
 
 .main-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns:100% auto;
+  
   padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  
+  max-width: 1300px;
+  margin: 0 ;
 }
 
-.content {
-  width: 60%;
+.content{
+  margin-left: 10%;
 }
+
 
 .image {
-  width: 35%;
-  display: flex;
+  
+  display: grid;
   justify-content: center;
   align-items: center;
+  
+  height: 400px;
+  margin-left: 20%;
+
+}
+
+.video-container {
+  
+  
+  border-radius: 10px;
+  display: flex;
+  
+  margin-top: 20px;
+  height: 500px;
+  
 }
 
 .image img {
@@ -81,6 +100,7 @@ header .icons > * {
 }
 
 section {
+  
   padding: 20px 0;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -97,9 +117,20 @@ h2 {
 }
 
 .works {
+
   padding: 20px;
 }
+.works h2{
+  
+  font-size: 40px;
+}
 
+.skills {
+  padding: 20px;
+}
+.contacts {
+  padding: 20px;
+}
 .work-item {
   margin-bottom: 20px;
   display: flex;
