@@ -1,18 +1,30 @@
 import React from 'react';
 import { FaGuitar, FaMicrophone, FaMusic } from 'react-icons/fa';
-
+import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect';
 const Header = () => {
   return (
-    <header>
-      <h1>Shahe</h1>
+    <header >
+        <motion.div
+        
+        initial={{ x: '-100%',opacity:"0" }} // Starting position
+        animate={{ x: '0%',opacity:"1" }} // Ending position
+        transition={{type:"spring", delay: 1, ease: 'easeOut', duration: 2 }} // Animation settings
+      >
+        <h1>SHAHE</h1>
+      </motion.div>
       <p>
-        Hi, I'm Shahe, an artist, professional vocalist, singer/songwriter, and producer with over six years of experience in music production, specializing in pop and dance music.
+      
+      Hi, I'm Shahe<Typewriter
+  options={{
+    strings: ['an artist', 'a professional vocalist', 'a singer', 'a songwriter','and producer'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+       
       </p>
-      <div className="icons">
-        <FaGuitar />
-        <FaMicrophone />
-        <FaMusic />
-      </div>
+      
     </header>
   );
 };

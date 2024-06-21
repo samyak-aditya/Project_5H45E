@@ -1,30 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
-
-body {
-  font-family: "Asap", sans-serif;
+/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');* {
   margin: 0;
   padding: 0;
-  background-color: #f0f2f5;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* Body styles */
+body {
+  font-family: "Asap", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
 header {
   background-image: url('./images/purple_shahe.jpg');
-  height: 1000px;
-  
   background-size: cover;
-  background-position:top;
-  
+  background-position: top;
+  background-attachment: fixed;
+  height: 1000px;
   padding: 40px 20px;
   color: white;
   text-align: center;
   border-bottom: 4px solid #4a4e69;
-  background-attachment: fixed;
-  
-   /* Ensure it's above other content */
-
+  position: relative; /* Ensure relative positioning */
+  font-family: "Antonio", sans-serif;  
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
+/* Overlay for better text visibility */
 header::before {
   content: '';
   position: absolute;
@@ -32,28 +40,28 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* Adds a dark overlay for better text visibility */
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-header h1, header p, header .icons {
-  position: relative;
-  z-index: 2;
-}
-
+/* Heading styles */
 header h1 {
-  font-size: 3em;
+  font-size: 40em;
   margin: 0;
-  font-weight: 700;
+  font-weight: 100;
+  z-index: 2; /* Ensure on top of overlay */
 }
 
 header p {
   font-size: 1.2em;
   margin: 10px 0 0;
+  z-index: 2; /* Ensure on top of overlay */
 }
 
+/* Icons styles */
 header .icons {
   margin-top: 20px;
+  z-index: 2; /* Ensure on top of overlay */
 }
 
 header .icons > * {
@@ -62,51 +70,59 @@ header .icons > * {
   color: #9a8c98;
 }
 
+/* Main content grid container */
 .main-content {
+ 
+  background-color: #1db954;
   display: grid;
-  grid-template-columns:100% auto;
-  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   padding: 40px 20px;
-  
   max-width: 1300px;
-  margin: 0 ;
+  margin: 0 auto;
 }
 
-.content{
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    padding: 20px; /* Reduced padding for better spacing */
+  }
+}
+
+/* Content wrapper styles */
+.content {
   margin-left: 10%;
 }
 
-
+/* Image container styles */
 .image {
-  
+  background-color: red;
   display: grid;
   justify-content: center;
   align-items: center;
-  
-  height: 400px;
+  height: 100%;
+  max-height: 900px;
   margin-left: 20%;
-
 }
 
+/* Video container styles */
 .video-container {
-  
-  
   border-radius: 10px;
   display: flex;
-  
   margin-top: 20px;
-  
   
 }
 
+/* Responsive image styles */
 .image img {
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Section styles */
 section {
-  
   padding: 20px 0;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -114,6 +130,7 @@ section {
   margin-bottom: 20px;
 }
 
+/* Heading styles */
 h2 {
   border-bottom: 2px solid #4a4e69;
   padding-bottom: 10px;
@@ -122,27 +139,33 @@ h2 {
   color: #22223b;
 }
 
+/* Works section styles */
 .works {
-
   padding: 20px;
 }
-.works h2{
-  
+
+.works h2 {
   font-size: 40px;
 }
 
+/* Skills section styles */
 .skills {
   padding: 20px;
 }
+
+/* Contact section styles */
 .contacts {
   padding: 20px;
 }
+
+/* Work item styles */
 .work-item {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
+/* Work title styles */
 .work-title {
   font-size: 1.2em;
   color: #3a3f58;
@@ -156,6 +179,7 @@ h2 {
   text-decoration: underline;
 }
 
+/* Album art styles */
 .album-art {
   width: 50px;
   height: 50px;
@@ -164,12 +188,14 @@ h2 {
   object-fit: cover;
 }
 
+/* Work item description styles */
 .work-item p {
   font-size: 1em;
   color: #4a4e69;
   margin-left: 60px; /* Adjust margin to align with the album art */
 }
 
+/* Spotify links container styles */
 .spotify-links {
   display: flex;
   flex-wrap: wrap;
@@ -178,6 +204,7 @@ h2 {
   margin-top: 20px;
 }
 
+/* Spotify item styles */
 .spotify-item {
   display: flex;
   flex-direction: column;
@@ -188,6 +215,7 @@ h2 {
   text-decoration: none;
 }
 
+/* Large album art styles */
 .large-album-art {
   width: 150px;
   height: 150px;
@@ -197,22 +225,33 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Spotify item text styles */
 .spotify-item span {
   color: #3a3f58;
   font-size: 1.2em;
   font-weight: bold;
 }
 
+/* Hover link styles */
 a:hover {
   background-color: #3a3f58;
   color: white;
 }
 
+.spotify-tile{
+  width: 26em;
+}
+.youtube-tile{
+  width: 26em;
+}
+
+/* Unordered list styles */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* List item styles */
 li {
   background: #e0e0e0;
   margin: 5px 0;
@@ -223,15 +262,18 @@ li {
   color: #4a4e69;
 }
 
+/* SVG icon styles for sections */
 li svg {
   margin-right: 10px;
   color: #9a8c98;
 }
 
+/* Last section margin adjustment */
 section:last-of-type {
   margin-bottom: 40px;
 }
 
+/* Paragraph styles with SVG icons */
 section p svg {
   margin-right: 10px;
   color: #9a8c98;
