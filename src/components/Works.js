@@ -1,58 +1,74 @@
-// src/components/Works.js
 import React from 'react';
-import music from '../images/audio.gif'
+import music from '../images/audio.gif';
+import Tilt from 'react-parallax-tilt';
 
 const Works = () => {
   const works = [
     {
-      title: 'TU MERI',
+      title: 'AUDACITY',
       youtube: 'https://youtu.be/O0eLnJ_-v-s',
       description: 'This song reflects a boy\'s realization that his life has improved and become more vibrant since the girl who caused him pain is no longer a part of it.',
-      albumArt: 'path/to/tu-meri-album-art.jpg', // Add the path to the album art
-      spotifyEmbed: 'https://open.spotify.com/embed/track/1N4TubxZXkhFTGEICOqAht?utm_source=generator'
+      albumArt: 'https://i.scdn.co/image/ab67616d00001e02f1df1dee711eeb8f1a77da31',
+      spotifyEmbed: 'https://open.spotify.com/embed/track/1N4TubxZXkhFTGEICOqAht?utm_source=generator',
+      streams: '1.2M'
     },
     {
-      title: 'ABHI NAHI',
+      title: 'SULTRY',
       youtube: 'https://youtu.be/qDIvZx6fF5w',
       description: 'This song narrates a boy\'s frustration as he tries to focus on an assassination mission while his girlfriend incessantly discusses her emotional issues, prompting him to repeatedly sing that he doesn\'t want to talk and will address it later.',
-      albumArt: 'path/to/abhi-nahi-album-art.jpg', // Add the path to the album art
-      spotifyEmbed: 'https://open.spotify.com/embed/track/4FW7RGggxRZ0f8nRNzUOLd?utm_source=generator'
+      albumArt: 'path/to/abhi-nahi-album-art.jpg',
+      spotifyEmbed: 'https://open.spotify.com/embed/track/4FW7RGggxRZ0f8nRNzUOLd?utm_source=generator',
+      streams: '850K'
     },
     {
       title: 'SLIDE ZARA',
       youtube: 'https://youtu.be/link-to-slide-zara',
       description: 'Description of Slide Zara.',
-      albumArt: 'path/to/slide-zara-album-art.jpg', // Add the path to the album art
-      spotifyEmbed: 'https://open.spotify.com/embed/track/5svinFbE044frhIYJzs2GZ?utm_source=generator'
+      albumArt: 'path/to/slide-zara-album-art.jpg',
+      spotifyEmbed: 'https://open.spotify.com/embed/track/5svinFbE044frhIYJzs2GZ?utm_source=generator',
+      streams: '500K'
     },
     {
       title: 'FIROZI FITOOR',
       youtube: 'https://youtu.be/link-to-firozi-fitoor',
       description: 'Description of Firozi Fitoor.',
-      albumArt: 'path/to/firozi-fitoor-album-art.jpg', // Add the path to the album art
-      spotifyEmbed: 'https://open.spotify.com/embed/track/327vFaJvqx2yD9gyUTYB9U?utm_source=generator'
+      albumArt: 'path/to/firozi-fitoor-album-art.jpg',
+      spotifyEmbed: 'https://open.spotify.com/embed/track/327vFaJvqx2yD9gyUTYB9U?utm_source=generator',
+      streams: '900K'
     }
   ];
 
   return (
     <section className="works">
-     <h2 style={{ display: 'flex', alignItems: 'center' }}>
-      Works
-      <img src={music} alt="music" style={{ height: '45px', width: '45px', marginLeft: '10px' }} />
-    </h2>
-
-      
-      
-      <iframe 
-      style={{borderRadius:"12px" }}
-      src="https://open.spotify.com/embed/track/1N4TubxZXkhFTGEICOqAht" 
-      width="100%" height="152" 
-      frameBorder="0" 
-      allowfullscreen="1" 
-      //allow="autoplay; clipboard-write; encrypted-media;" 
-      loading="lazy"></iframe>
-        
-      
+      <h2 style={{ display: 'flex', alignItems: 'center' }}>
+        Works
+        <img src={music} alt="music" style={{ height: '45px', width: '45px', marginLeft: '10px' }} />
+      </h2>
+      {works.map((work, index) => (
+                                  <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8} tiltReverse>
+        <div className="work-item" key={index}>
+          <img src={work.albumArt} alt={`${work.title} album art`} className="album-art" />
+          <div className="work-details">
+            <a href={work.youtube} className="work-title" target="_blank" rel="noopener noreferrer">
+              {work.title}
+            </a>
+            <p>{work.description}</p>
+            <p><strong>Streams:</strong> {work.streams}</p>
+            <div className='embedded'>
+              <iframe
+                title={work.title}
+                src={work.spotifyEmbed}
+                width="250"
+                height="80"
+                frameBorder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        </Tilt>
+      ))}
     </section>
   );
 };
