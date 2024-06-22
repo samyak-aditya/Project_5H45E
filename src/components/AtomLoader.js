@@ -1,19 +1,14 @@
-// AtomLoader.js
-
 import React from 'react';
-import './AtomLoader.css'; // Import the CSS for the AtomLoader
+import './Loader.css'; // Import the CSS file
 
-const AtomLoader = () => {
+const Loader = () => {
   return (
-    <main className='main-loader'>
-      <div className="atom">
-        <div className="electron"></div>
-        <div className="electron-alpha"></div>
-        <div className="electron-omega"></div>
-      </div>
-      
-    </main>
+    <div className='bg-color'>
+    <div className="loader-container">
+      <h1 className='loader' data-shadow='Fruits Creatives'>Fruits <br />Creatives</h1>
+    </div>
+    </div>
   );
 };
 
-export default AtomLoader;
+export default Loader;

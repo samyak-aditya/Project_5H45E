@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Works from './components/Works';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import AtomLoader from './components/AtomLoader';
+import Loader from './components/AtomLoader';
 import './App.css';
 import Tilt from 'react-parallax-tilt';
 
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Simulate a 2-second loading delay
+    }, 100000); // Simulate a 2-second loading delay
 
     return () => clearTimeout(timer);
   }, []);
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       {loading ? (
-        <AtomLoader />
+        <Loader />
       ) : (
         <>
           <Header />
@@ -30,7 +30,7 @@ function App() {
               <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
                 <Works />
               </Tilt>
-              <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
+              <Tilt tiltMaxAngleY={1} tiltMaxAngleX={1}>
                 <Skills />
               </Tilt>
               <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>

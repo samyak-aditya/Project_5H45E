@@ -1,5 +1,9 @@
 /* Reset default margin and padding */
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');* {
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&family=Bungee+Shade&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +12,7 @@
 /* Body styles */
 body {
   font-family: "Asap", sans-serif;
-  background-color: #f0f2f5;
+  
   color: #333;
   margin: 0;
   padding: 0;
@@ -73,12 +77,14 @@ header .icons > * {
 /* Main content grid container */
 .main-content {
  
-  background-color: #1db954;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: 70% auto ;
+  
+justify-content: stretch;
+align-items: start;
+  gap: 0px;
   padding: 40px 20px;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -92,18 +98,19 @@ header .icons > * {
 
 /* Content wrapper styles */
 .content {
-  margin-left: 10%;
+  margin-left: 0%;
+  
+
 }
 
 /* Image container styles */
 .image {
-  background-color: red;
   display: grid;
   justify-content: center;
   align-items: center;
   height: 100%;
   max-height: 900px;
-  margin-left: 20%;
+  margin-left: 0%;
 }
 
 /* Video container styles */
@@ -111,23 +118,29 @@ header .icons > * {
   border-radius: 10px;
   display: flex;
   margin-top: 20px;
-  
+  width: 100%;
 }
 
 /* Responsive image styles */
-.image img {
-  max-width: 100%;
+.image iframe {
+  width: 25vw;
+
+  min-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: aqua;
+  
 }
 
 /* Section styles */
 section {
   padding: 20px 0;
-  background-color: white;
+  background-color: rgb(255, 255, 245);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  
 }
 
 /* Heading styles */
@@ -150,50 +163,88 @@ h2 {
 
 /* Skills section styles */
 .skills {
+  background-color: #f8baff;
+  font-family: "Big Shoulders Inline Display", sans-serif;
   padding: 20px;
+  font-size: 80px;
+  font-weight: 500;
 }
+
+
 
 /* Contact section styles */
 .contacts {
   padding: 20px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.contacts h2 {
+
 }
 
 /* Work item styles */
-.work-item {
+.works {
+  padding: 20px;
+  background-color: rgb(167, 255, 237);
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+ 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  
 }
 
-/* Work title styles */
+.work-item {
+background-color: rgba(253, 188, 254, 0.5);
+  
+  background-repeat: no-repeat;  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.album-art {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.work-details {
+  max-width: calc(100% - 120px); /* Adjust width based on album art width and margin */
+}
+
 .work-title {
   font-size: 1.2em;
   color: #3a3f58;
   text-decoration: none;
   font-weight: bold;
-  display: flex;
-  align-items: center;
 }
 
 .work-title:hover {
   text-decoration: underline;
 }
 
-/* Album art styles */
-.album-art {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-/* Work item description styles */
-.work-item p {
+.work-details p {
   font-size: 1em;
   color: #4a4e69;
-  margin-left: 60px; /* Adjust margin to align with the album art */
+  margin: 10px 0;
 }
+
+.embedded{
+  width: 100%;
+  
+  display: flex;
+  justify-content: end;
+}
+
 
 /* Spotify links container styles */
 .spotify-links {
@@ -238,12 +289,12 @@ a:hover {
   color: white;
 }
 
-.spotify-tile{
-  width: 26em;
+/* .spotify-tile{
+  width: 100%;
 }
 .youtube-tile{
   width: 26em;
-}
+} */
 
 /* Unordered list styles */
 ul {
