@@ -16,6 +16,14 @@
     background-color: rgb(255, 162, 74);
     }
   
+    /* Container to center the loader and set background color */
+.bg-color {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+   /* Background color */
+}
 
     .loader-container h1 {
 
@@ -52,3 +60,36 @@
   0% {background-position: 0 0}
   0% {background-position: 100% -100%}
   }
+
+  .loading-bar-container {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    
+  }
+  
+  .loading-bar {
+    height: 100%;
+    background-color: white;
+    width: 0;
+    border-radius: 15px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .loading-percentage {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.5em;
+    font-family: 'Righteous', serif;
+  }
+  
