@@ -16,23 +16,23 @@ const Works = () => {
       title: 'SULTRY',
       youtube: 'https://youtu.be/qDIvZx6fF5w',
       description: 'This song narrates a boy\'s frustration as he tries to focus on an assassination mission while his girlfriend incessantly discusses her emotional issues, prompting him to repeatedly sing that he doesn\'t want to talk and will address it later.',
-      albumArt: 'path/to/abhi-nahi-album-art.jpg',
+      albumArt: 'https://i.scdn.co/image/ab67616d00001e0270aac13ac8a24628d08065d5',
       spotifyEmbed: 'https://open.spotify.com/embed/track/4FW7RGggxRZ0f8nRNzUOLd?utm_source=generator',
       streams: '850K'
     },
     {
       title: 'SLIDE ZARA',
       youtube: 'https://youtu.be/link-to-slide-zara',
-      description: 'Description of Slide Zara.',
-      albumArt: 'path/to/slide-zara-album-art.jpg',
+      description: '',
+      albumArt: 'https://i.scdn.co/image/ab67616d00001e023022b399cf1ac37c29b230e4',
       spotifyEmbed: 'https://open.spotify.com/embed/track/5svinFbE044frhIYJzs2GZ?utm_source=generator',
       streams: '500K'
     },
     {
       title: 'FIROZI FITOOR',
       youtube: 'https://youtu.be/link-to-firozi-fitoor',
-      description: 'Description of Firozi Fitoor.',
-      albumArt: 'path/to/firozi-fitoor-album-art.jpg',
+      description: '',
+      albumArt: 'https://i.scdn.co/image/ab67616d00001e0286a5445cdd5458c5e0a681ba',
       spotifyEmbed: 'https://open.spotify.com/embed/track/327vFaJvqx2yD9gyUTYB9U?utm_source=generator',
       streams: '900K'
     }

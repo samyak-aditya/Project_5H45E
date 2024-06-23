@@ -3,12 +3,14 @@ import { FaTools } from 'react-icons/fa';
 import guitar from '../images/electric-guitar.gif';
 import mic from '../images/shahe-mic.jpg';
 import Tilt from 'react-parallax-tilt';
-
+import studio from '../images/shahe-studio.jpg'
+import ruins from '../images/shahe-ruins.jpg'
+import mirror from '../images/shahe-mirror.jpeg'
 const Skills = () => {
   const skills = [
     {
       name: 'Mix and Master',
-      backgroundImage: mic
+      backgroundImage: studio
     },
     {
       name: 'Vocalist, Singer & Songwriter',
@@ -16,11 +18,11 @@ const Skills = () => {
     },
     {
       name: 'Guitar & Keys',
-      backgroundImage: mic
+      backgroundImage: mirror
     },
     {
       name: 'FL Studio & Plugins',
-      backgroundImage: mic
+      backgroundImage: ruins
     }
   ];
 
@@ -42,7 +44,7 @@ const Skills = () => {
               height: '100%',
               backgroundImage: `url(${skill.backgroundImage})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'top',
               backgroundAttachment: 'fixed',
               zIndex: 0,
               filter: 'brightness(0.7)'
