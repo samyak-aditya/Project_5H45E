@@ -31,7 +31,7 @@
   color: white;
   font-family: 'Righteous', serif;
   font-size: 12em; 
-  text-shadow: .03em .03em 0 rgb(252, 153, 61);
+  text-shadow: .03em .03em 0 rgb(252, 146, 46);
   }
   .loader-container h1:after {
     
@@ -45,15 +45,15 @@
       linear-gradient(
         45deg,
         transparent 45%,
-        hsla(48,20%,90%,1) 45%,
-        hsla(48,20%,90%,1) 55%,
+        hsla(48,20%,90%,1) 25%,
+        hsla(48,20%,90%,1) 60%,
         transparent 0
         );
     background-size: .05em .05em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   
-    animation: shad-anim 20s linear infinite;
+    animation: shad-anim 35s linear infinite;
     }
 
 @keyframes shad-anim {

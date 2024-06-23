@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Loader.css';
+import Typewriter from 'typewriter-effect';
 
 const Loader = () => {
   const [progress, setProgress] = useState(0);

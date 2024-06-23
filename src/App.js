@@ -6,34 +6,40 @@ import Contact from './components/Contact';
 import Loader from './components/AtomLoader';
 import './App.css';
 import Tilt from 'react-parallax-tilt';
-
+import TextPostEmbed from './components/embededpost';
+import WaveAnimation from './components/wave';
+import BackgroundWrapper from './components/waveWrapper';
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Simulate a 2-second loading delay
+    }, 2400); // Simulate a 2-second loading delay
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="App">
-      {loading ? (
+    <>
+     {loading ? (
         <Loader />
       ) : (
+    <div className="App" style={{backgroundColor: "white"}}>
+     
         <>
           <Header />
+          
           <div className="main-content">
+          
             <div className="content">
-              <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
+              <Tilt tiltMaxAngleY={4} tiltMaxAngleX={4}>
                 <Works />
               </Tilt>
-              <Tilt tiltMaxAngleY={1} tiltMaxAngleX={1}>
+              <Tilt tiltMaxAngleY={4} tiltMaxAngleX={4}>
                 <Skills />
               </Tilt>
-              <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
+              <Tilt tiltMaxAngleY={4} tiltMaxAngleX={4}>
                 <Contact />
               </Tilt>
             </div>
@@ -66,11 +72,19 @@ function App() {
                   ></iframe>
                 </Tilt>
               </div>
+              <div className='gallery'>
+                
+                             </div>
             </div>
           </div>
+          
+          
+          
         </>
-      )}
+      
     </div>
+    )}
+    </>
   );
 }
 
