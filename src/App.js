@@ -6,9 +6,7 @@ import Contact from './components/Contact';
 import Loader from './components/AtomLoader';
 import './App.css';
 import Tilt from 'react-parallax-tilt';
-import TextPostEmbed from './components/embededpost';
-import WaveAnimation from './components/wave';
-import BackgroundWrapper from './components/waveWrapper';
+
 function App() {
   const [loading, setLoading] = useState(true);
 

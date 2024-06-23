@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGuitar, FaMicrophone, FaMusic } from 'react-icons/fa';
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect';
 const Header = () => {
