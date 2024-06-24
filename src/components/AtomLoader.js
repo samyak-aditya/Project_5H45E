@@ -19,7 +19,7 @@ const Loader = () => {
   return (
     <div className="bg-color">
       <div className="loader-container">
-        <h1 className='loader' data-shadow='Fruits Creatives'>Fruits <br />Creatives</h1>
+        <h1 className='loader' data-shadow='Fruit Creatives'>Fruit <br />Creatives</h1>
         <div className="loading-bar-container">
           <div className="loading-bar" style={{ width: `${progress}%` }}></div>
           <div className="loading-percentage">{`${Math.floor(progress)}%`}</div>
