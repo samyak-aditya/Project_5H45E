@@ -45,7 +45,7 @@ const Works = () => {
         <img src={music} alt="music" style={{ height: '105px', width: '105px', marginLeft: '10px' }} />
       </h2>
       {works.map((work, index) => (
-                                  <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                  <Tilt tiltMaxAngleY={4} tiltMaxAngleX={4}>
         <div className="work-item" key={index}>
           <img src={work.albumArt} alt={`${work.title} album art`} className="album-art" />
           <div className="work-details">
