@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&family=Bungee+Shade&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -11,7 +13,6 @@
 
 /* Body styles */
 body {
-  font-family: "Asap", sans-serif;
   
   color: #333;
   margin: 0;
@@ -123,17 +124,21 @@ align-items: start;
   }
 
   .works {
+
+    font-family: "Big Shoulders Stencil Display", sans-serif;
     max-width: 100%;
+  }
+
+  .works h2{
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+
   }
 
   .skills {
     max-width: 100%;
   }
 
-  .contacts{
-    max-width: 100%;
-    font-size: 20px;
-  }
+  
   .works .work-item {
     display: flex;
     flex-direction: column;
@@ -164,12 +169,7 @@ align-items: start;
     font-size: 40px; /* Decrease font size in skills section */
   }
 
-  .contacts h2 {
-    font-size: 50px; /* Decrease font size in contact section */
-  }
-  .contacts p {
-    font-size: 20px; /* Decrease font size in contact section */
-  }
+  
   
 
 }
@@ -236,11 +236,15 @@ h2 {
 
 /* Works section styles */
 .works {
+
   padding: 20px;
 }
 
 .works h2 {
-  font-size: 40px;
+  font-family: "Big Shoulders Stencil Display", sans-serif;
+  font-size: 150px;
+  font-weight: 600;
+  
 }
 
 /* Skills section styles */
@@ -259,13 +263,27 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-family: "Josefin Slab", serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 60px;
 }
 
 .contacts h2 {
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 140px; /* Decrease font size in contact section */
+  font-weight: 500;
+}
+.contacts p {
+  font-size: 20px; /* Decrease font size in contact section */
+}
 
+.icon-img {
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
 }
 
 /* Work item styles */
@@ -288,7 +306,8 @@ background-color: rgba(253, 188, 254, 0.5);
   background-repeat: no-repeat;  display: flex;
   align-items: center;
   margin-bottom: 20px;
-  
+  display: flex;
+  align-items: start;
   border-radius: 10px;
   font-size: 20px;
 }
@@ -297,8 +316,10 @@ background-color: rgba(253, 188, 254, 0.5);
   width: 200px;
   height: 200px;
   margin-right: 20px;
+  margin-top: 5px;
   border-radius: 5px;
   object-fit: cover;
+  
 }
 
 .work-details {
@@ -306,7 +327,7 @@ background-color: rgba(253, 188, 254, 0.5);
 }
 
 .work-title {
-  font-size: 1.2em;
+  font-size: 2.2em;
   color: #3a3f58;
   text-decoration: none;
   font-weight: bold;
@@ -369,8 +390,8 @@ background-color: rgba(253, 188, 254, 0.5);
 
 /* Hover link styles */
 a:hover {
-  background-color: #3a3f58;
-  color: white;
+ 
+ 
 }
 
 /* .spotify-tile{

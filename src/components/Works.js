@@ -1,5 +1,5 @@
 import React from 'react';
-import music from '../images/audio.gif';
+import music from '../images/audio-unscreen.gif';
 import Tilt from 'react-parallax-tilt';
 
 const Works = () => {
@@ -42,10 +42,10 @@ const Works = () => {
     <section className="works">
       <h2 style={{ display: 'flex', alignItems: 'center' }}>
         Works
-        <img src={music} alt="music" style={{ height: '45px', width: '45px', marginLeft: '10px' }} />
+        <img src={music} alt="music" style={{ height: '105px', width: '105px', marginLeft: '10px' }} />
       </h2>
       {works.map((work, index) => (
-                                  <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8} tiltReverse>
+                                  <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
         <div className="work-item" key={index}>
           <img src={work.albumArt} alt={`${work.title} album art`} className="album-art" />
           <div className="work-details">
