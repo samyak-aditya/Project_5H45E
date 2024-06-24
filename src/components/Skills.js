@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTools } from 'react-icons/fa';
-import guitar from '../images/electric-guitar.gif';
+import guitar from '../images/electric-guitar-unscreen.gif';
 import mic from '../images/shahe-mic.jpg';
 import Tilt from 'react-parallax-tilt';
 import studio from '../images/shahe-studio.jpg'
@@ -30,7 +30,7 @@ const Skills = () => {
     <section className="skills">
       <h2 style={{ display: 'flex', alignItems: 'center' }}>
         Skills
-        <img src={guitar} alt="music" style={{ height: '45px', width: '45px', marginLeft: '10px' }} />
+        <img src={guitar} alt="music" style={{ height: '105px', width: '105px', marginLeft: '10px' }} />
       </h2>
       <ul className="listskill">
         {skills.map((skill, index) => (
