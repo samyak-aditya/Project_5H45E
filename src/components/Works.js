@@ -2,6 +2,7 @@ import React from 'react';
 import music from '../images/audio-unscreen.gif';
 import Tilt from 'react-parallax-tilt';
 
+
 const Works = () => {
   const works = [
     {
@@ -47,8 +48,10 @@ const Works = () => {
       {works.map((work, index) => (
                                   <Tilt tiltMaxAngleY={4} tiltMaxAngleX={4}>
         <div className="work-item" key={index}>
+          
           <img src={work.albumArt} alt={`${work.title} album art`} className="album-art" />
           <div className="work-details">
+            
             <a href={work.youtube} className="work-title" target="_blank" rel="noopener noreferrer">
               {work.title}
             </a>

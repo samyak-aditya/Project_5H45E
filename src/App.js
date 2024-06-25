@@ -7,6 +7,7 @@ import Loader from './components/AtomLoader';
 import './App.css';
 import Tilt from 'react-parallax-tilt';
 import qrcode from './images/shahe_qrcode.png';
+import Background from './components/Background';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,8 @@ function App() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="App" style={{ backgroundColor: 'white' }}>
+        <div className="App" style={{  }}>
+          <Background />
           <>
             <Header />
             <div className="main-content">
