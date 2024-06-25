@@ -1,9 +1,9 @@
 // Contact.js
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
+
 
 import emailGif from '../images/email_nobg.gif';
-import { BsTextWrap } from 'react-icons/bs';
+
 
 const contactDetails = [
   {

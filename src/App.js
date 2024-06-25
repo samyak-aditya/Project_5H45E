@@ -8,7 +8,7 @@ import './App.css';
 import Tilt from 'react-parallax-tilt';
 import qrcode from './images/shahe_qrcode.png';
 import Background from './components/Background';
-import Background2 from './components/Background2';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
