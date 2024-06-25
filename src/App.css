@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Inline+Display:wght@100..900&family=Bungee+Shade&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 * {
   margin: 0;
@@ -20,6 +22,7 @@ body {
 
 /* Header styles */
 header {
+  width: 100vw;
   background-image: url('./images/purple_shahe.jpg');
   background-size: cover;
   background-position: top;
@@ -50,7 +53,7 @@ header::before {
 
 /* Heading styles */
 header h1 {
-  font-size: 40em;
+  font-size: 33vw;
   margin: 0;
   font-weight: 100;
   z-index: 2; /* Ensure on top of overlay */
@@ -76,9 +79,9 @@ header .icons > * {
 
 .about {
   padding: 20px;
-  background-color: #f0f0f0;
+  
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
  
   text-align: left;
   max-width: 800px;
@@ -86,20 +89,23 @@ header .icons > * {
 }
 
 .about h2 {
-  font-size: 24px;
+  font-size: 4rem;
   margin-bottom: 10px;
-  color: #7C47E1;
+  color: #ff4ff3;
+  font-family: "Big Shoulders Inline Display", sans-serif;
+  font-weight: 750;
 }
 
 .about p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  color: whitesmoke;
 }
 
 /* Main content grid container */
 .main-content {
- 
+ width: 100vw;
   display: grid;
   grid-template-columns: 70% auto ;
   
@@ -114,16 +120,20 @@ align-items: start;
 @media (max-width: 768px) {
   
   .main-content {
+   
   font-size: 20%;
     grid-template-columns: 1fr; /* Single column layout on smaller screens */
     padding: 0px; /* Reduced padding for better spacing */
-   width: 100%;
+   width: 100vw;
+   
   }
 
   
 
+  
+
   header {
-    width: 108%;
+    width: 100vw;
     height: 100%; /* Adjust height for smaller screens */
     padding: 20px;
     background-attachment: fixed; /* Remove fixed background on mobile */
@@ -146,18 +156,21 @@ align-items: start;
   }
 
   .works {
-
-    font-family: "Big Shoulders Stencil Display", sans-serif;
-    max-width: 100%;
+ width: 100vw;
+   
   }
 
-  .works h2{
-    font-family: "Big Shoulders Stencil Display", sans-serif;
 
-  }
+
+ 
+
+  
+  
 
   .skills {
     max-width: 100%;
+    width: 100vw;
+    font-size: 40px;
   }
 
   
@@ -167,7 +180,7 @@ align-items: start;
     align-items: center;
     text-align: center;
     padding: 20px;
-    background-color: rgb(167, 255, 237);
+   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 20px;
@@ -175,25 +188,70 @@ align-items: start;
 
   .works .work-item .work-details p {
     display: none; /* Hide detailed text on mobile */
+    
+  }
+
+  .musiccd{
+    display: none;
   }
 
   .works .work-item .album-art {
     width: 150px; /* Adjust size of album art */
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .works .work-item .work-title {
     font-size: 1em; /* Adjust font size of title */
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .skills {
-    font-size: 40px; /* Decrease font size in skills section */
+  .contacts{
+    
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 100vw;
+  }
+
+  .contacts h2{
+    font-size: 50px; /* Decrease font size in contact section */
+
   }
 
   
-  
 
+ .image{
+  
+  width: 100vw;
+ }
+
+ .image iframe {
+  width: 25vw;
+
+  min-width: 300px;
+  border-radius: 10px;
+  
+  
+}
+
+  .embedded  iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 223.5px;
+    
+  }
+  
+  
 }
 
 
@@ -258,21 +316,20 @@ h2 {
 }
 
 /* Works section styles */
-.works {
 
-  padding: 20px;
-}
 
 .works h2 {
   font-family: "Big Shoulders Inline Display", sans-serif;
   font-size: 150px;
   font-weight: 800;
+  color: black;
   
 }
 
 /* Skills section styles */
 .skills {
-  background: linear-gradient(to bottom,  rgb(182, 1, 182),rgb(36, 36, 198));  background-size: contain;
+
+  background: linear-gradient(to bottom,rgba(234, 0, 234,0.6), rgba(45, 45, 255,0.7)); 
 
   font-family: "Big Shoulders Inline Display", sans-serif;
   padding: 20px;
@@ -284,20 +341,22 @@ h2 {
 
 /* Contact section styles */
 .contacts {
+
+  font-family: "Josefin Sans", sans-serif;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  text-wrap:balance;
   
-  font-size: 60px;
 }
 
 .contacts h2 {
   font-family: "Big Shoulders Inline Display", sans-serif;
-  font-size: 140px; /* Decrease font size in contact section */
+  font-size: 8vw; /* Decrease font size in contact section */
   font-weight: 800;
 }
 .contacts p {
-  font-size: 20px; /* Decrease font size in contact section */
+  font-size: 5vw;; /* Decrease font size in contact section */
 }
 
 .icon-img {
@@ -312,13 +371,14 @@ h2 {
 
 /* Work item styles */
 .works {
+  
   padding: 20px;
-  background: linear-gradient(to bottom, rgba(97, 97, 252,0.3), rgba(252, 76, 252,0.3)); 
+  background: linear-gradient(to bottom,rgb(234, 0, 234,0.7), rgb(45, 45, 255,0.7)); 
    background-size: contain;
   background-position: center;
   background-attachment: fixed;
   
- color: #e0e0e0;
+ color: #293442;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
@@ -341,30 +401,34 @@ background-color: rgba(255, 245, 255, 0.3);
   width: 200px;
   height: 200px;
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 0px;
   border-radius: 5px;
   object-fit: cover;
   
 }
 
 .work-details {
+  margin-top: 10px;
+  font-family: "Josefin Sans", sans-serif;
   max-width: calc(100% - 120px); /* Adjust width based on album art width and margin */
 }
 
 .work-title {
+  margin-top: 0px;
   font-size: 2.2em;
-  color: #ccd4fc;
+  color: #eaecf3;
   text-decoration: none;
   font-weight: bold;
 }
 
 .work-title:hover {
-  text-decoration: underline;
+  text-shadow: 2px 2px 4px #3a3f58
+  
 }
 
 .work-details p {
   font-size: 1em;
-  color: #4a4e69;
+  color: #eaecf3;
   margin: 10px 0;
 }
 
@@ -373,7 +437,17 @@ background-color: rgba(255, 245, 255, 0.3);
   
   display: flex;
   justify-content: end;
+  
+ 
 }
+
+.embedded iframe{
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+}
+
+
 
 
 /* Spotify links container styles */
@@ -464,11 +538,11 @@ section p svg {
   
   background-image: url('./images/shahe-sofa.jpg');
   background-size: contain;
-  background-position:1190px;
+  background-position:61vw;
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin-top: 10%;
-  height: 50vh ;
+  height: 55vh ;
   width: 100%;
   border-radius: 20px;
   /* animation: anim 30s infinite; */
