@@ -1,32 +1,37 @@
 // Contact.js
 import React from 'react';
+import Tilt from 'react-parallax-tilt';
 
 import emailGif from '../images/email_nobg.gif';
+import { BsTextWrap } from 'react-icons/bs';
 
 const contactDetails = [
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/732/732200.png',
-    title: 'Email',
-    info: 'shahe@example.com',
+    title: 'shahemusic@gmail.com',
+    info: '',
     link: 'mailto:shahe@example.com',
   },
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/0/488.png',
-    title: 'Contact Number',
-    info: '+1234567890',
+    title: '+91 7970856179',
+    info: '',
     link: 'tel:+1234567890',
   },
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/15713/15713420.png',
-    title: 'Instagram',
-    info: '@shahemusic',
+    title: '@shahemusic',
+    info: '',
     link: 'https://www.instagram.com/shahemusic',
   },
 ];
 
 const ContactCard = ({ icon, title, info, link }) => {
   return (
+    
+
     <div className="contact-card" style={cardStyle}>
+      
       <div style={iconStyle}>
         <a href={link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
           <img src={icon} alt={title} className="icon-img" />
@@ -34,7 +39,9 @@ const ContactCard = ({ icon, title, info, link }) => {
       </div>
       <h3 style={titleStyle}>{title}</h3>
       <p style={infoStyle}>{info}</p>
+      
     </div>
+   
   );
 };
 
@@ -45,6 +52,7 @@ const Contact = () => {
         Contacts
         <img src={emailGif} alt="email" style={{ height: '105px', width: '105px', marginLeft: '10px' }} />
       </h2>
+     
       <div style={cardsContainerStyle}>
         {contactDetails.map((contact, index) => (
           <ContactCard 
@@ -56,13 +64,15 @@ const Contact = () => {
           />
         ))}
       </div>
+      
     </section>
   );
 };
 
 const contactsStyle = {
   padding: '20px',
-  backgroundColor: '#f9f9f9',
+  background: 'rgba(234, 0, 234,0.2)',
+
   borderRadius: '8px',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   maxWidth: '1000px',
@@ -76,14 +86,22 @@ const cardsContainerStyle = {
 };
 
 const cardStyle = {
-  border: '1px solid #ddd',
+ 
   borderRadius: '8px',
+  
   padding: '20px',
   margin: '10px',
   textAlign: 'center',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  width: '250px',
+  width: '27%',
+  minWidth:'200px',
+ display: 'flex',
+ flexDirection: 'column',
+ justifyContent: 'center',
+
   transition: 'transform 0.3s ease',
+  background: 'rgba(45, 45, 255,0.3)' 
+
 };
 
 const iconStyle = {
@@ -91,8 +109,13 @@ const iconStyle = {
 };
 
 const titleStyle = {
-  fontSize: '20px',
+  fontSize: '1.35em',
   marginBottom: '10px',
+  //backgroundColor: 'rgba(255, 255, 255, 1)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  
 };
 
 const infoStyle = {
