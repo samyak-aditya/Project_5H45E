@@ -254,7 +254,7 @@ h2 {
   padding-bottom: 10px;
   font-size: 2em;
   margin-top: 0;
-  color: #22223b;
+  
 }
 
 /* Works section styles */
@@ -272,7 +272,8 @@ h2 {
 
 /* Skills section styles */
 .skills {
-  background-color: #f8baff;
+  background: linear-gradient(to bottom,  rgb(182, 1, 182),rgb(36, 36, 198));  background-size: contain;
+
   font-family: "Big Shoulders Inline Display", sans-serif;
   padding: 20px;
   font-size: 80px;
@@ -312,11 +313,10 @@ h2 {
 /* Work item styles */
 .works {
   padding: 20px;
-  background-color: rgb(167, 255, 237);
-  background-size: contain;
+  background: linear-gradient(to bottom, rgb(36, 36, 198), rgb(182, 1, 182));  background-size: contain;
   background-position: center;
   background-attachment: fixed;
- 
+ color: #e0e0e0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
@@ -324,7 +324,7 @@ h2 {
 }
 
 .work-item {
-background-color: rgba(253, 188, 254, 0.5);
+background-color: rgba(255, 245, 255, 0.3);
   
   background-repeat: no-repeat;  display: flex;
   align-items: center;
@@ -351,7 +351,7 @@ background-color: rgba(253, 188, 254, 0.5);
 
 .work-title {
   font-size: 2.2em;
-  color: #3a3f58;
+  color: #ccd4fc;
   text-decoration: none;
   font-weight: bold;
 }
