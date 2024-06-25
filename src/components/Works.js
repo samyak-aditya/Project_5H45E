@@ -1,7 +1,7 @@
 import React from 'react';
 import music from '../images/audio-unscreen.gif';
 import Tilt from 'react-parallax-tilt';
-import Particlebg from './Particlebg';
+
 
 const Works = () => {
   const works = [
